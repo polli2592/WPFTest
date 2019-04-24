@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:tree="clr-namespace:WpfApplication1.Tree"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
@@ -51,19 +52,32 @@
                 <DataGridTextColumn  Header="Раздел" Width="{Binding ElementName=ColumnPartunit,Path=Width}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TreeView Grid.Row="1" Margin="8"        
-                  ItemsSource="{Binding Parts}">
-        </TreeView>
 
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Добавить раздел" Margin="5" Click="Button_Click"/>
-            <Button Grid.Column="1" Content="Удалить раздел" Margin="5"/>
-            <Button Grid.Column="2" Content="Добавить переменные данные" Margin="5"/>
-        </Grid>
-        </Grid>
+        <tree:TreeList x:Name="_tree" Grid.Row="1">
+            <tree:TreeList.View>
+                <GridView>
+                    <GridView.Columns>
+
+                        <GridViewColumn Width="400" Header="Name">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <tree:RowExpander/>
+                                        <Image Source="{Binding Converter={StaticResource RegImageConverter}}"  Margin="0, 0, 5, 0"/>
+                                        <TextBlock Text="{Binding Name}"></TextBlock>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Type" Width="50" DisplayMemberBinding="{Binding Kind}"/>
+                        <GridViewColumn Header="Data" Width="100" DisplayMemberBinding="{Binding Data}"/>
+
+                    </GridView.Columns>
+                </GridView>
+            </tree:TreeList.View>
+        </tree:TreeList>
+
+
+    </Grid>
 </Window>

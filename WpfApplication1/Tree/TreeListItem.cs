@@ -7,7 +7,7 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Windows;
 
-namespace Aga.Controls.Tree
+namespace WpfApplication1.Tree
 {
 	public class TreeListItem : ListViewItem, INotifyPropertyChanged
 	{

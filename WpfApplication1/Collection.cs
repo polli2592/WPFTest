@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Collections.Specialized;
 
-namespace Aga.Controls
+namespace WpfApplication1
 {
 	public class ObservableCollectionAdv<T> : ObservableCollection<T>
 	{

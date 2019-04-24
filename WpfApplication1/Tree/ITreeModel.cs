@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 
-namespace Aga.Controls.Tree
+namespace WpfApplication1.Tree
 {
 	public interface ITreeModel
 	{

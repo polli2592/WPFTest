@@ -5,7 +5,7 @@ using System.Windows.Data;
 using System.Globalization;
 
 
-namespace Aga.Controls.Tree
+namespace WpfApplication1.Tree
 {
     /// <summary>
     /// Convert Level to left margin

@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Collections.Specialized;
 
-namespace Aga.Controls.Tree
+namespace WpfApplication1.Tree
 {
 	public sealed class TreeNode : INotifyPropertyChanged
 	{

@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Aga.Controls.Tree
+namespace WpfApplication1.Tree
 {
 	public class RowExpander : Control
 	{

@@ -12,7 +12,8 @@ using System.Collections.Specialized;
 using System.Windows.Input;
 using System.Windows.Controls.Primitives;
 
-namespace Aga.Controls.Tree
+
+namespace WpfApplication1.Tree
 {
 	public class TreeList: ListView
 	{
